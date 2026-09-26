@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MGS Business &amp; Tech — Tecnologia e varejo em Goianésia, Goiás</title>
+<meta name="description" content="A MGS Business &amp; Tech desenvolve software para donos de pequenos negócios brasileiros e opera a Vicênzia Shop, loja multimarcas de moda em Goianésia, Goiás.">
+<link rel="canonical" href="https://mgsbusinesstech.com.br/">
+<meta property="og:title" content="MGS Business &amp; Tech">
+<meta property="og:description" content="Tecnologia e varejo para o pequeno negócio brasileiro. Goianésia, Goiás.">
+<meta property="og:url" content="https://mgsbusinesstech.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23e8a33d' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f6f5f2;
+    --ink:#16181c;
+    --ink-soft:#4a4f57;
+    --ink-faint:#787f88;
+    --line:#e2e0da;
+    --accent:#b4761c;
+    --accent-ink:#8a5a13;
+    --card:#ffffff;
+    --shadow:0 1px 2px rgba(20,22,26,.05),0 8px 24px rgba(20,22,26,.05);
+    --maxw:1080px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#111316;
+      --bg-alt:#171a1e;
+      --ink:#eceef1;
+      --ink-soft:#b3b9c1;
+      --ink-faint:#868d96;
+      --line:#262a30;
+      --accent:#e0a54a;
+      --accent-ink:#f0c274;
+      --card:#171a1e;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#111316;--bg-alt:#171a1e;--ink:#eceef1;--ink-soft:#b3b9c1;--ink-faint:#868d96;
+    --line:#262a30;--accent:#e0a54a;--accent-ink:#f0c274;--card:#171a1e;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:hover{color:var(--accent)}
+
+  /* header */
+  header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:10}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;font-size:17px}
+  .mark{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--accent);
+        display:grid;place-items:center;font:700 16px/1 Georgia,serif;flex:none}
+  nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+  nav a{color:var(--ink-soft);text-decoration:none}
+  nav a:hover{color:var(--ink)}
+  @media (max-width:640px){nav{display:none}}
+
+  /* hero */
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin:0 0 14px}
+  h1{font-size:clamp(30px,5.2vw,46px);line-height:1.12;letter-spacing:-.022em;margin:0 0 18px;font-weight:700;max-width:19ch}
+  .lead{font-size:clamp(17px,2.2vw,20px);color:var(--ink-soft);margin:0;max-width:58ch}
+
+  /* sections */
+  section{padding:56px 0}
+  section + section{border-top:1px solid var(--line)}
+  .alt{background:var(--bg-alt)}
+  h2{font-size:clamp(21px,3vw,27px);line-height:1.25;letter-spacing:-.015em;margin:0 0 10px;font-weight:700}
+  .sub{color:var(--ink-soft);margin:0 0 30px;max-width:62ch}
+  h3{font-size:18px;margin:0 0 8px;font-weight:650;letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  p:last-child{margin-bottom:0}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow)}
+  .card p{color:var(--ink-soft);font-size:16px}
+  .tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+       color:var(--accent-ink);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-bottom:12px}
+
+  /* dados */
+  dl.facts{display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:0;margin:0;
+           border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+  dl.facts dt{padding:13px 18px;font-size:14px;color:var(--ink-faint);border-top:1px solid var(--line);font-weight:500}
+  dl.facts dd{padding:13px 18px;margin:0;font-size:15px;border-top:1px solid var(--line)}
+  dl.facts dt:first-of-type,dl.facts dd:first-of-type{border-top:0}
+  @media (max-width:560px){
+    dl.facts{grid-template-columns:1fr}
+    dl.facts dt{padding-bottom:0;border-top:1px solid var(--line)}
+    dl.facts dd{padding-top:4px;border-top:0}
+    dl.facts dd:first-of-type{border-top:0}
+  }
+
+  /* contato */
+  .contact{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .contact .card p{font-size:16px;color:var(--ink)}
+  .contact .k{font-size:13px;color:var(--ink-faint);margin:0 0 4px;letter-spacing:.03em;text-transform:uppercase;font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 44px;font-size:14px;color:var(--ink-faint);background:var(--bg-alt)}
+  footer p{margin:0 0 6px;line-height:1.6}
+  footer strong{color:var(--ink-soft);font-weight:600}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">M</span>
+      MGS Business&nbsp;&amp;&nbsp;Tech
+    </a>
+    <nav aria-label="Seções">
+      <ul>
+        <li><a href="#atuacao">Atuação</a></li>
+        <li><a href="#empresa">A empresa</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Goianésia · Goiás · Brasil</p>
+      <h1>Tecnologia e varejo para o pequeno negócio brasileiro.</h1>
+      <p class="lead">
+        A MGS desenvolve software para quem toca o próprio negócio e opera uma loja de
+        moda multimarcas no interior de Goiás. As duas coisas se alimentam: o que
+        aprendemos atendendo no balcão vira produto.
+      </p>
+    </div>
+  </div>
+
+  <section id="atuacao">
+    <div class="wrap">
+      <h2>O que fazemos</h2>
+      <p class="sub">
+        Duas frentes, a mesma origem: o dia a dia de um pequeno negócio brasileiro de verdade.
+      </p>
+      <div class="grid">
+
+        <article class="card">
+          <span class="tag">Tecnologia</span>
+          <h3>Software para donos de pequenos negócios</h3>
+          <p>
+            Desenvolvemos aplicativos e sistemas voltados à rotina de quem administra o
+            próprio negócio: controle de contas a pagar e a receber, leitura de documentos
+            e boletos, acompanhamento de estoque e de resultado.
+          </p>
+          <p>
+            O trabalho é feito internamente, em Goianésia, com desenvolvimento próprio para
+            iOS e Android.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Varejo</span>
+          <h3>Vicênzia Shop</h3>
+          <p>
+            Loja multimarcas de moda em Goianésia, operada pela MGS. Vestuário, calçados,
+            acessórios, cama, mesa e banho, perfumaria e bijuteria.
+          </p>
+          <p>
+            É a operação que sustenta a empresa desde a fundação — e o laboratório onde os
+            problemas que o software resolve aparecem primeiro.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Método</span>
+          <h3>Produto construído de dentro para fora</h3>
+          <p>
+            Cada função nasce de uma necessidade medida na operação, não de uma suposição
+            sobre o mercado. O que não resolve um problema real da loja não entra no produto.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="empresa" class="alt">
+    <div class="wrap">
+      <h2>A empresa</h2>
+      <p class="sub">
+        A MGS é uma sociedade empresária limitada com sede própria em Goianésia, Goiás,
+        constituída em fevereiro de 2025 e em situação cadastral ativa na Receita Federal.
+      </p>
+      <dl class="facts">
+        <dt>Razão social</dt>
+        <dd>MGS Soluções e Negócios Ltda.</dd>
+        <dt>CNPJ</dt>
+        <dd>59.705.162/0001-78</dd>
+        <dt>Natureza jurídica</dt>
+        <dd>206-2 — Sociedade Empresária Limitada</dd>
+        <dt>Data de abertura</dt>
+        <dd>28 de fevereiro de 2025</dd>
+        <dt>Sede</dt>
+        <dd>Avenida Goiás, 289-A — Carrilho — Goianésia/GO — CEP 76380-745</dd>
+        <dt>Administração</dt>
+        <dd>Marcelo Gomes dos Santos, sócio administrador</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <h2>Contato</h2>
+      <p class="sub">
+        Falamos português. Respondemos em horário comercial, de segunda a sexta.
+      </p>
+      <div class="contact">
+        <div class="card">
+          <p class="k">E-mail</p>
+          <p><a href="mailto:contato@mgsbusinesstech.com.br">contato@mgsbusinesstech.com.br</a></p>
+        </div>
+        <div class="card">
+          <p class="k">Telefone</p>
+          <p><a href="tel:+5562996876373">+55 (62) 99687-6373</a></p>
+        </div>
+        <div class="card">
+          <p class="k">Endereço</p>
+          <p>Avenida Goiás, 289-A<br>Carrilho — Goianésia/GO<br>CEP 76380-745 — Brasil</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>MGS SOLUÇÕES E NEGÓCIOS LTDA.</strong> — CNPJ 59.705.162/0001-78</p>
+    <p>Avenida Goiás, 289-A — Carrilho — Goianésia/GO — CEP 76380-745 — Brasil</p>
+    <p>contato@mgsbusinesstech.com.br</p>
+  </div>
+</footer>
+
+</body>
+</html>

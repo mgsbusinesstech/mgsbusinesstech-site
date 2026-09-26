@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mgsbusinesstech.com.br/sitemap.xml
