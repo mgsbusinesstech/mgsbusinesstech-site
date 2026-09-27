@@ -75,8 +75,9 @@
   @media (max-width:760px){nav{display:none}}
 
   /* ---------- sections ---------- */
-  section{padding:40px 0}
-  section:first-of-type{padding-top:44px}
+  section{padding:52px 0}
+  section:first-of-type{padding-top:28px}
+  @media (max-width:620px){section{padding:36px 0}}
   .sec-head{margin:0 0 var(--gap); position:relative; z-index:2}
   .kicker{
     display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600;
@@ -85,15 +86,15 @@
   }
   .kicker.orange{color:#C1420F; background:rgba(255,107,53,.12)}
   /* desalinhamento: o título vaza para fora do bloco e invade a linha de baixo */
-  h2{font-size:clamp(30px,4.4vw,50px); margin-left:-.035em}
+  h2{font-size:clamp(28px,3.6vw,42px); margin-left:-.03em}
   .sec-head.overlap{margin-bottom:-26px; padding-bottom:26px; pointer-events:none}
   .sec-head.overlap .kicker, .sec-head.overlap h2{pointer-events:auto}
-  .sub{color:var(--ink-2); max-width:58ch; margin:14px 0 0; font-size:17px}
+  .sub{color:var(--ink-2); max-width:60ch; margin:18px 0 0; font-size:17px; line-height:1.6}
 
   /* ---------- hero ---------- */
-  .hero h1{font-size:clamp(38px,6.1vw,68px); margin-left:-.04em; margin-bottom:22px; max-width:15ch}
+  .hero h1{font-size:clamp(36px,5.1vw,58px); margin-left:-.035em; margin-bottom:20px; max-width:16ch}
   .hero h1 em{font-style:normal; color:var(--klein)}
-  .hero .lead{color:var(--ink-2); font-size:clamp(16.5px,1.75vw,19px); max-width:50ch; margin:0 0 30px}
+  .hero .lead{color:var(--ink-2); font-size:18px; max-width:50ch; margin:0 0 30px}
   .cta-row{display:flex; flex-wrap:wrap; gap:12px}
   .btn{
     display:inline-flex; align-items:center; gap:9px; text-decoration:none; font-weight:600; font-size:15.5px;
@@ -108,10 +109,10 @@
   .btn:hover .arw{transform:translateX(4px)}
 
   /* hero side block */
-  .side{display:flex; flex-direction:column; justify-content:space-between; gap:22px; background:var(--klein); color:#fff; border-color:transparent}
-  .side .big{font-family:Inter,sans-serif; font-weight:900; font-size:clamp(34px,4vw,46px); line-height:1; letter-spacing:-.03em}
+  .side{display:flex; flex-direction:column; justify-content:flex-start; gap:24px; background:var(--klein); color:#fff; border-color:transparent}
+  .side .big{font-family:Inter,sans-serif; font-weight:900; font-size:clamp(30px,3.2vw,40px); line-height:1; letter-spacing:-.03em}
   .side .lbl{font-size:13.5px; color:rgba(255,255,255,.72); line-height:1.55}
-  .chips{display:flex; flex-wrap:wrap; gap:8px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:auto}
   .chip{font-size:12.5px; font-weight:600; padding:7px 13px; border-radius:999px; background:rgba(255,255,255,.14); color:#fff}
   .chip.t{background:var(--tanger); color:#fff}
   .minilist{list-style:none; margin:0; padding:20px 0; display:grid; gap:13px; border-top:1px solid rgba(255,255,255,.18); border-bottom:1px solid rgba(255,255,255,.18)}
@@ -128,7 +129,7 @@
   .ico.b{background:rgba(0,47,167,.09); color:var(--klein)}
   .ico.o{background:rgba(255,107,53,.14); color:#D9531F}
   .ico.d{background:var(--ink); color:#fff}
-  .block h3{font-size:20.5px; margin-bottom:11px; letter-spacing:-.02em}
+  .block h3{font-size:20px; margin-bottom:11px; letter-spacing:-.02em}
   .block p{color:var(--ink-2); margin:0; font-size:16px}
   .block p + p{margin-top:12px}
 
@@ -137,7 +138,7 @@
   .dark h3,.dark h2{color:#fff}
   .dark p{color:rgba(255,255,255,.72)}
   .quote{display:flex; flex-direction:column; justify-content:center; background:var(--tanger); color:#fff; border-color:transparent}
-  .quote .q{color:#fff; font-family:Inter,sans-serif; font-weight:900; font-size:clamp(22px,2.5vw,30px); line-height:1.15; letter-spacing:-.025em}
+  .quote .q{color:#fff; font-family:Inter,sans-serif; font-weight:900; font-size:clamp(21px,2.1vw,26px); line-height:1.15; letter-spacing:-.025em}
   .quote .qs{margin-top:16px; font-size:14.5px; color:rgba(255,255,255,.85)}
 
   /* ---------- facts ---------- */
@@ -292,8 +293,8 @@
     <div class="wrap bento">
       <div class="block dark c7 rv">
         <span class="kicker" style="color:#fff;background:rgba(255,255,255,.12)">Como trabalhamos</span>
-        <h2 style="font-size:clamp(26px,3.4vw,40px); margin-left:-.03em">Decisão com evidência,<br>não com suposição.</h2>
-        <p style="margin-top:18px; max-width:52ch">
+        <h2>Decisão com evidência,<br>não com suposição.</h2>
+        <p class="sub" style="color:rgba(255,255,255,.72)">
           Cada escolha de produto nasce de uma dificuldade observada e medida, não de uma
           opinião sobre o que o cliente precisaria. O que não resolve um problema concreto
           não entra — e o que entra, entra documentado.
@@ -315,10 +316,8 @@
     <div class="wrap bento">
       <div class="block c12 rv">
         <span class="kicker orange">Em desenvolvimento</span>
-        <h2 style="font-size:clamp(24px,3vw,34px); margin-left:-.03em; max-width:22ch">
-          O primeiro produto está sendo construído.
-        </h2>
-        <p style="color:var(--ink-2); max-width:62ch; margin-top:16px">
+        <h2>O primeiro produto está sendo construído.</h2>
+        <p class="sub">
           Um aplicativo voltado à rotina financeira de quem administra o próprio negócio:
           contas a pagar e a receber, leitura de documentos pela câmera, acompanhamento de
           estoque e de resultado. Ainda não está publicado — quando estiver, será anunciado
@@ -350,7 +349,7 @@
 
         <div class="block c4 rv" style="display:flex;flex-direction:column;justify-content:center;gap:18px">
           <span class="badge"><span class="dot" aria-hidden="true"></span> Situação cadastral ativa</span>
-          <p style="margin:0">
+          <p class="sub" style="margin:0">
             Os dados acima são os do cadastro na Receita Federal e podem ser conferidos por
             qualquer pessoa pelo número do CNPJ.
           </p>
