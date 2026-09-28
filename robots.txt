@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /confirmacao
 
 Sitemap: https://mgsbusinesstech.com.br/sitemap.xml
