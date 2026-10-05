@@ -57,7 +57,7 @@
   @media (max-width:760px){nav{display:none}}
 
   /* ---------- sections ---------- */
-  section{padding:52px 0}
+  section{padding:34px 0}
   section:first-of-type{padding-top:28px}
   @media (max-width:620px){section{padding:36px 0}}
   .sec-head{margin:0 0 var(--gap); position:relative; z-index:2}
@@ -318,18 +318,36 @@
 .e3 .c7 .it1 span{color:var(--t3);text-decoration:line-through}
 .e4 .c7 .foto{opacity:1;transform:rotate(3deg);transition:transform .6s cubic-bezier(.3,1.5,.5,1),opacity .3s}
 
-/* as funções, como cartões de vidro do app */
-.vfun{padding:40px 48px 44px}
+/* as funções, como cartões de vidro do app — refeito em 05/10: duas colunas, mais ar, ícone que reage */
+.vfun{padding:48px 52px 44px}
+.vtopo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 40px;align-items:end;margin-bottom:30px}
 .vfun .vk{display:inline-flex;font:600 12.5px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--acTx);background:var(--acSoft);padding:8px 14px;border-radius:999px;margin-bottom:14px}
-.vfun h2{font:700 clamp(26px,3vw,34px)/1.15 Inter,sans-serif;letter-spacing:-.025em;margin:0 0 24px;color:var(--t1)}
-.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.vcard{background:var(--sfG);box-shadow:var(--vidro);border-radius:20px;padding:18px;display:flex;gap:14px;align-items:flex-start}
-.vcard h3{font:600 17px/1.3 Inter,sans-serif;letter-spacing:-.01em;margin:2px 0 4px;color:var(--t1)}
-.vcard p{font:400 15px/1.45 Inter,sans-serif;color:var(--t2);margin:0}
-.vcard .em-breve{display:inline-block;margin-top:8px;font:600 12.5px/1 Inter,sans-serif;color:#8A3307;background:rgba(196,75,10,.12);padding:6px 10px;border-radius:999px}
-.vnota{font:400 14.5px/1.5 Inter,sans-serif;color:var(--t2);margin:18px 0 0}
-@media (max-width:940px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:620px){.vgrid{grid-template-columns:1fr}.vfun{padding:28px 22px}}
+.vfun h2{font:700 clamp(26px,3vw,34px)/1.15 Inter,sans-serif;letter-spacing:-.025em;margin:0;color:var(--t1)}
+.vtopo p{font:400 17px/1.55 Inter,sans-serif;color:var(--t2);margin:0}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.vcard{position:relative;background:var(--sfG);box-shadow:var(--vidro);border-radius:22px;padding:24px;display:flex;gap:18px;align-items:flex-start;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.vcard .tile{width:48px;height:48px;border-radius:14px;transition:transform .5s cubic-bezier(.3,1.6,.5,1),box-shadow .45s var(--ease)}
+.vcard .tile svg{width:24px;height:24px}
+.vcard:hover{transform:translateY(-4px);box-shadow:var(--vidro),0 18px 36px rgba(40,40,90,.10)}
+.vcard:hover .tile{transform:scale(1.12) rotate(-7deg);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 18px rgba(30,30,60,.18)}
+.vcard:active{transform:scale(.985)}
+.vcard:active .tile,.vcard.toque .tile{transform:scale(.9) rotate(4deg)}
+.vcard h3{font:600 18px/1.3 Inter,sans-serif;letter-spacing:-.012em;margin:2px 0 6px;color:var(--t1)}
+.vcard p{font:400 15.5px/1.5 Inter,sans-serif;color:var(--t2);margin:0}
+.vcard.larga{grid-column:1/-1;align-items:center;padding:26px 28px;background:linear-gradient(120deg,rgba(255,255,255,.82),rgba(255,255,255,.6))}
+.vcard.larga .tile{width:60px;height:60px;border-radius:17px}.vcard.larga .tile svg{width:28px;height:28px}
+.vcard.larga h3{font-size:21px}
+.vcard.larga p{max-width:64ch}
+.vsep{display:flex;align-items:center;gap:12px;margin:34px 0 18px;font:600 12.5px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8A3307}
+.vsep::after{content:"";flex:1;height:1px;background:rgba(196,75,10,.22)}
+.vcard.breve{background:rgba(255,255,255,.42);box-shadow:inset 0 0 0 1px rgba(196,75,10,.22)}
+.vcard.breve .tile{filter:saturate(.55)}
+.vcard.breve:hover .tile{filter:none}
+.vnota{font:400 15px/1.5 Inter,sans-serif;color:var(--t2);margin:28px 0 0}
+@media (prefers-reduced-motion:reduce){.vcard,.vcard .tile{transition:none}.vcard:hover,.vcard:active{transform:none}.vcard:hover .tile,.vcard:active .tile,.vcard.toque .tile{transform:none}}
+@media (max-width:940px){.vtopo{grid-template-columns:1fr}}
+@media (max-width:620px){.vgrid{grid-template-columns:1fr;gap:12px}.vfun{padding:30px 20px}.vcard{flex-direction:column;gap:12px;padding:20px}.vcard.larga{padding:20px;align-items:flex-start}.vcard.larga .tile{width:52px;height:52px}.vcard h3,.vcard.larga h3{margin-top:0}}
 
 /* páginas de apoio (site) */
 .dados .frow dd{font-weight:400;color:var(--ink-2);font-size:16px;line-height:1.6}

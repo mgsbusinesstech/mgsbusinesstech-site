@@ -100,6 +100,9 @@ if(deck){
  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(mede);
 }
 
+/* no toque (celular), o ícone da função reage como no passar do mouse */
+document.querySelectorAll('.vcard').forEach(function(c){c.addEventListener('touchstart',function(){c.classList.add('toque');setTimeout(function(){c.classList.remove('toque')},260)},{passive:true})});
+
 /* a entrada dos blocos, como na página inicial */
 var els=document.querySelectorAll('.rv');
 if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
