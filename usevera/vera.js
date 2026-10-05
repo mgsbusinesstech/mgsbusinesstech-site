@@ -103,6 +103,11 @@ if(deck){
 /* no toque (celular), o ícone da função reage como no passar do mouse */
 document.querySelectorAll('.vcard').forEach(function(c){c.addEventListener('touchstart',function(){c.classList.add('toque');setTimeout(function(){c.classList.remove('toque')},260)},{passive:true})});
 
+/* os ícones das funções pulam em sequência quando a grade aparece */
+document.querySelectorAll('.vgrid').forEach(function(g){[].forEach.call(g.querySelectorAll('.tile'),function(t,i){t.style.setProperty('--i',i)});
+ if(!('IntersectionObserver' in window)){g.classList.add('viu');return}
+ var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){g.classList.add('viu');o.disconnect()}})},{threshold:.2});o.observe(g)});
+
 /* a entrada dos blocos, como na página inicial */
 var els=document.querySelectorAll('.rv');
 if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}

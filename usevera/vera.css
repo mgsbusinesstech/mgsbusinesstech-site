@@ -11,7 +11,7 @@
     --tanger:#FF6B35;
     --r:24px;
     --r-sm:16px;
-    --gap:24px;
+    --gap:20px;
     --pad:32px;
     --shadow:0 12px 32px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.02);
     --shadow-hi:0 22px 48px rgba(0,0,0,.09), 0 4px 12px rgba(0,0,0,.04);
@@ -57,9 +57,9 @@
   @media (max-width:760px){nav{display:none}}
 
   /* ---------- sections ---------- */
-  section{padding:34px 0}
+  section{padding:22px 0}
   section:first-of-type{padding-top:28px}
-  @media (max-width:620px){section{padding:36px 0}}
+  @media (max-width:620px){section{padding:36px 0} :root{--gap:24px}}
   .sec-head{margin:0 0 var(--gap); position:relative; z-index:2}
   .kicker{
     display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600;
@@ -348,6 +348,21 @@
 @media (prefers-reduced-motion:reduce){.vcard,.vcard .tile{transition:none}.vcard:hover,.vcard:active{transform:none}.vcard:hover .tile,.vcard:active .tile,.vcard.toque .tile{transform:none}}
 @media (max-width:940px){.vtopo{grid-template-columns:1fr}}
 @media (max-width:620px){.vgrid{grid-template-columns:1fr;gap:12px}.vfun{padding:30px 20px}.vcard{flex-direction:column;gap:12px;padding:20px}.vcard.larga{padding:20px;align-items:flex-start}.vcard.larga .tile{width:52px;height:52px}.vcard h3,.vcard.larga h3{margin-top:0}}
+
+
+/* os ícones entram com um pulo, em sequência, quando o bloco aparece (uma vez) */
+.vgrid .tile{opacity:0;transform:scale(.55) rotate(-14deg)}
+.vgrid.viu .tile{animation:pulaIco .7s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--i,0) * 90ms)}
+@keyframes pulaIco{from{opacity:0;transform:scale(.55) rotate(-14deg)}to{opacity:1;transform:none}}
+.vgrid.viu .vcard:hover .tile{animation:none;opacity:1;transform:scale(1.12) rotate(-7deg)}
+.vgrid.viu .vcard:active .tile,.vgrid.viu .vcard.toque .tile{animation:none;opacity:1;transform:scale(.9) rotate(4deg)}
+@media (prefers-reduced-motion:reduce){.vgrid .tile{opacity:1;transform:none}.vgrid.viu .tile{animation:esmaece .8s ease both}}
+
+/* lista sem ordem (não são passos) */
+.lista{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px}
+.lista li{position:relative;padding-left:22px;font-size:16px;line-height:1.6;color:var(--ink-2)}
+.lista li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--tanger)}
+.dark .lista li{color:rgba(255,255,255,.8)}.dark .lista li b{color:#fff}
 
 /* páginas de apoio (site) */
 .dados .frow dd{font-weight:400;color:var(--ink-2);font-size:16px;line-height:1.6}
